@@ -1,7 +1,6 @@
 document.getElementById('button').onclick = async function afficher() {
     document.getElementById("button").style.display = 'none'
     var template = document.getElementById("card-template");
-    var parent = document.getElementById("div");
     for (let i = 1; i <= 100; i+=1) {;
         let clone = document.importNode(template.content, true);
 
@@ -38,6 +37,6 @@ document.getElementById('button').onclick = async function afficher() {
         catch(error){
             console.log(error);
         }
-        parent.appendChild(clone);
+        document.getElementById("div").appendChild(clone);
     }
 }
